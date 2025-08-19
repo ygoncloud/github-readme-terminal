@@ -1,5 +1,5 @@
 <p align="center">
-    <img width="640" alt="github-readme-terminal" src="https://raw.githubusercontent.com/x0rzavi/github-readme-terminal/main/docs/assets/logo.png">
+    <img width="640" alt="github-readme-terminal" src="https://raw.githubusercontent.com/ygoncloud/github-readme-terminal/main/docs/assets/logo.png">
     <br>
     <b>✨ Elevate your GitHub Profile ReadMe with Minimalistic Retro Terminal GIFs 🚀</b>
 </p>
@@ -68,14 +68,14 @@ t = gifos.Terminal(width=320, height=240, xpad=5, ypad=5)
 t.gen_text(text="Hello World!", row_num=1)
 t.gen_text(text="With \x1b[32mANSI\x1b[0m escape sequence support!", row_num=2)
 github_stats = gifos.utils.fetch_github_stats(
-    user_name="x0rzavi"
-)  # needs GITHUB_TOKEN in .env or as environment variable
+    user_name="ygoncloud"
+)  # needs MY_GITHUB_TOKEN in .env or as environment variable
 t.delete_row(row_num=1)
 t.gen_text(text=f"GitHub Name: {github_stats.account_name}", row_num=1, contin=True)
 t.gen_gif()
 image = gifos.utils.upload_imgbb(
     file_name="output.gif", expiration=60
-)  # needs IMGBB_API_KEY in .env or as environment variable
+)  # needs MY_IMGBB_API_KEY in .env or as environment variable
 print(image.url)
 ```
 
@@ -100,7 +100,7 @@ debug = false
 cursor = "_"
 show_cursor = true
 blink_cursor = true
-user_name = "x0rzavi" # for prompt
+user_name = "ygoncloud" # for prompt
 fps = 15
 color_scheme = "yoru"
 loop_count = 0 # infinite loop
@@ -154,10 +154,10 @@ export GIFOS_CATPPUCCIN-MOCHA_DEFAULT_COLORS_BG="black"
 
 Optional API keys for modules must be present in `.env` file or declared as environment variables:
 
-1. `GITHUB_TOKEN`
+1. `MY_GITHUB_TOKEN`
    - Repository access - All repositories
    - Repository permissions - Contents: Read-only
-2. `IMGBB_API_KEY`
+2. `MY_IMGBB_API_KEY`
 
 ### 🌈 Color schemes included
 

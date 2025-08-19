@@ -21,11 +21,11 @@ Contributors can enhance the project by implementing new features or improvement
 
  ## How to Contribute?
 - Drop a Star ⭐ in this repo
-- Take a look at the existing [Issues](https://github.com/x0rzavi/github-readme-terminal/issues). 
+- Take a look at the existing [Issues](https://github.com/ygconloud/github-readme-terminal/issues). 
 - Fork the Repo & create a branch for any issue that you are working on and commit your work.
 - At first raise an issue in which you want to work
 - Then after assigning only then work on that issue & make a PR 
-- Create a [**Pull Request**](https://github.com/x0rzavi/github-readme-terminal/pulls), which will be promptly reviewed and given suggestions for improvements by the community.
+- Create a [**Pull Request**](https://github.com/ygoncloud/github-readme-terminal/pulls), which will be promptly reviewed and given suggestions for improvements by the community.
 - **REMINDER: Don't raise more than 1 `Issue` at a time**
 - **IMPORTANT: Don't make any type of `Pull Request` until & unless you get assigned to an `Issue`**
 - Add screenshots or screen captures to your `Pull Request` to help us understand the effects of the changes that are included in your commits.

@@ -133,7 +133,7 @@ class Terminal:
         self.__fps = gifos_settings.get("general", {}).get("fps") or 20
         self.__loop_count = gifos_settings.get("general", {}).get("loop_count") or 0
         self.__user_name = (
-            gifos_settings.get("general", {}).get("user_name") or "x0rzavi"
+            gifos_settings.get("general", {}).get("user_name") or "ygoncloud"
         )
         self.__prompt = (
             f"\x1b[0;91m{self.__user_name}\x1b[0m@\x1b[0;93mgifos ~> \x1b[0m"

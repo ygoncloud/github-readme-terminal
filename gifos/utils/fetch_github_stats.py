@@ -18,7 +18,7 @@ from gifos.utils.schemas.github_user_stats import GithubUserStats
 """This module contains a function for fetching a GitHub user's statistics."""
 
 load_dotenv()
-GITHUB_TOKEN = os.getenv("GITHUB_TOKEN")
+MY_GITHUB_TOKEN = os.getenv("MY_GITHUB_TOKEN")
 GRAPHQL_ENDPOINT = "https://api.github.com/graphql"
 
 
@@ -26,7 +26,7 @@ def fetch_repo_stats(user_name: str, repo_end_cursor: str = None) -> dict:
     """Fetch statistics for a user's repositories.
 
     This function sends a GraphQL query to the GitHub API to fetch statistics for a
-    user's repositories. The function uses the `GITHUB_TOKEN` environment variable for
+    user's repositories. The function uses the `MY_GITHUB_TOKEN` environment variable for
     authentication and the `GRAPHQL_ENDPOINT` constant for the API endpoint.
 
     :param user_name: The username of the user to fetch statistics for.
@@ -83,7 +83,7 @@ def fetch_repo_stats(user_name: str, repo_end_cursor: str = None) -> dict:
         # }
     }
     """
-    headers = {"Authorization": f"bearer {GITHUB_TOKEN}"}
+    headers = {"Authorization": f"bearer {MY_GITHUB_TOKEN}"}
     variables = {"user_name": user_name, "repo_end_cursor": repo_end_cursor}
 
     response = requests.post(
@@ -109,7 +109,7 @@ def fetch_user_stats(user_name: str) -> dict:
     """Fetch statistics for a GitHub user.
 
     This function sends a GraphQL query to the GitHub API to fetch statistics for a
-    GitHub user. The function uses the `GITHUB_TOKEN` environment variable for
+    GitHub user. The function uses the `MY_GITHUB_TOKEN` environment variable for
     authentication and the `GRAPHQL_ENDPOINT` constant for the API endpoint.
 
     :param user_name: The username of the user to fetch statistics for.
@@ -159,7 +159,7 @@ def fetch_user_stats(user_name: str) -> dict:
     }
     """
 
-    headers = {"Authorization": f"bearer {GITHUB_TOKEN}"}
+    headers = {"Authorization": f"bearer {MY_GITHUB_TOKEN}"}
     variables = {"user_name": user_name}
 
     response = requests.post(
@@ -186,7 +186,7 @@ def fetch_total_commits(user_name: str) -> int:
     """Fetch the total number of commits (lifetime) made by a GitHub user.
 
     This function sends a GET request to the GitHub REST API to fetch the total number
-    of commits made by a GitHub user. The function uses the `GITHUB_TOKEN` environment
+    of commits made by a GitHub user. The function uses the `MY_GITHUB_TOKEN` environment
     variable for authentication.
 
     :param user_name: The username of the user to fetch the total number of commits for.
@@ -198,9 +198,9 @@ def fetch_total_commits(user_name: str) -> int:
     REST_API_URL = f"https://api.github.com/search/commits?q=author:{user_name}"
     headers = {
         "Content-Type": "application/json",
-        "User-Agent": "x0rzavi",
+        "User-Agent": "ygoncloud",
         "Accept": "application/vnd.github+json",
-        "Authorization": f"token {GITHUB_TOKEN}",
+        "Authorization": f"token {MY_GITHUB_TOKEN}",
     }
     response = requests.get(REST_API_URL, headers=headers)
     if response.status_code == 200:
@@ -219,7 +219,7 @@ def fetch_github_stats(
     """Fetch GitHub statistics for a user.
 
     This function fetches various statistics for a GitHub user. The function uses the
-    `GITHUB_TOKEN` environment variable for authentication.
+    `MY_GITHUB_TOKEN` environment variable for authentication.
 
     :param user_name: The username of the user to fetch statistics for.
     :type user_name: str
@@ -234,8 +234,8 @@ def fetch_github_stats(
         is successful, otherwise None.
     :rtype: GithubUserStats or None
     """
-    if not GITHUB_TOKEN:
-        print("ERROR: Please provide GITHUB_TOKEN")
+    if not MY_GITHUB_TOKEN:
+        print("ERROR: Please provide MY_GITHUB_TOKEN")
         sys.exit(1)
 
     repo_end_cursor = None

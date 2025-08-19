@@ -2,16 +2,16 @@
 name = "github-readme-terminal"
 version = "0.0.3"
 description = "✨ Elevate your GitHub Profile ReadMe with Minimalistic Retro Terminal GIFs 🚀"
-authors = ["Avishek Sen <x0rzavi@gmail.com>"]
+authors = ["ygoncloud <yongky@ygoncloud.web.id>"]
 license = "MIT"
 readme = "README.md"
-repository = "https://github.com/x0rzavi/github-readme-terminal"
+repository = "https://github.com/ygoncloud/github-readme-terminal"
 packages = [
     { include = "gifos" }
 ]
 
 [tool.poetry.urls]
-"Bug Tracker" = "https://github.com/x0rzavi/github-readme-terminal/issues"
+"Bug Tracker" = "https://github.com/ygoncloud/github-readme-terminal/issues"
 
 [tool.poetry.dependencies]
 python = "^3.9"
