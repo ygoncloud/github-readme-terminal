@@ -2,7 +2,7 @@
 name = "github-readme-terminal"
 version = "0.0.3"
 description = "✨ Elevate your GitHub Profile ReadMe with Minimalistic Retro Terminal GIFs 🚀"
-authors = ["ygoncloud <yongky@ygoncloud.web.id>"]
+authors = ["mumeyong <yongky@mumeyong.dev>"]
 license = "MIT"
 readme = "README.md"
 repository = "https://github.com/ygoncloud/github-readme-terminal"
