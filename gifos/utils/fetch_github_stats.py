@@ -198,7 +198,7 @@ def fetch_total_commits(user_name: str) -> int:
     REST_API_URL = f"https://api.github.com/search/commits?q=author:{user_name}"
     headers = {
         "Content-Type": "application/json",
-        "User-Agent": "ygoncloud",
+        "User-Agent": "mumeyong",
         "Accept": "application/vnd.github+json",
         "Authorization": f"token {MY_GITHUB_TOKEN}",
     }
